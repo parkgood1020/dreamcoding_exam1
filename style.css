@@ -1,0 +1,98 @@
+* {
+  font-family: "Oxygen", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: teal;
+  font-size: 20px;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.nav_div_menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav_div_menu li {
+  padding: 8px 12px;
+}
+
+.nav_div_menu li:hover {
+  background-color: purple;
+  border-radius: 10px;
+}
+
+.nav_div_icons {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav_div_icons li {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.navBar i {
+  font-size: 30px;
+  color: orange;
+}
+
+.nav_toggleBtn {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navBar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .nav_div_menu {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    display: none;
+  }
+
+  .nva_div_menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav_div_icons {
+    width: 100%;
+    justify-content: center;
+    display: none;
+  }
+
+  .nav_div_icons li {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .nav_toggleBtn {
+    display: block;
+    position: absolute;
+    right: 10px;
+  }
+
+  /* When toggle button is clicked - active state */
+  .nav_div_menu.active,
+  .nav_div_icons.active {
+    display: flex;
+  }
+}
